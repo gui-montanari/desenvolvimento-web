@@ -7,7 +7,7 @@ from typing import ClassVar
 
 class Settings(BaseSettings):
     DATABASE_URL: str = 'postgresql+asyncpg://postgres:postgres@localhost:5432/startup'
-    DBaseModel: ClassVar = declarative_base()
+    DBBaseModel: ClassVar = declarative_base()
     TEMPLATES: ClassVar = Jinja2Templates(directory="templates")
     MEDIA: ClassVar = Path('media')
 
