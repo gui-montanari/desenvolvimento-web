@@ -11,6 +11,7 @@ class ProjetoModel(settings.DBBaseModel):
 
     id: int = Column(Integer, primary_key=True, autoincrement=True)
     data: datetime = Column(DateTime, default=datetime.now, index=True)
+    
     titulo: str = Column(String(100))
     descricao_inicial: str = Column(String(300))
     imagem1: str = Column(String(100)) # 1300x700

@@ -1,13 +1,9 @@
-from fastapi import FastAPI
 from fastapi.routing import APIRouter
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
 from fastapi.requests import Request
+
 from core.configs import settings
 
-
 router = APIRouter()
-
 
 
 @router.get('/', name='index')
@@ -83,7 +79,7 @@ async def portfolio(request: Request):
 
 
 @router.get('/portfolio_item', name='portfolio_item')
-async def portfolio_item(request: Request, item: int = 0):
+async def portfolio_item(request: Request):
     context = {
         "request": request
     }
